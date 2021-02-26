@@ -1,4 +1,5 @@
 from collections import Counter
+import math
 
 num_friends = [100,49,41,40,25]
 
@@ -24,3 +25,8 @@ def dot(v,w):
     return sum(v_i * w_i for v_i,w_i in zip(v, w))
 
 print(variance(num_friends))
+
+def standard_deviation(x):
+    return math.sqrt(variance(x))
+
+print(standard_deviation(num_friends))
